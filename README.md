@@ -29,3 +29,5 @@ npm test
 (ユニットテストもよろしく！)
 
 getNRandomDogs は getTwoRandomDogs に似ているけど、二つではなく、n数のドッグオブジェクトをコールバック関数に渡すはずです。
+
+getNRandomDogs の第一引数は `n` となり、第二引数がコールバック関数のはず。
