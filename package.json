@@ -1,0 +1,24 @@
+{
+  "name": "async-js-callbacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bootcamp-tpa/async-js-callbacks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bootcamp-tpa/async-js-callbacks/issues"
+  },
+  "homepage": "https://github.com/bootcamp-tpa/async-js-callbacks#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}
