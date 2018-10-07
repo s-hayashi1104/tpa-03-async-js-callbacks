@@ -4,10 +4,12 @@ const getRandomName = function() {
 };
 
 const getRandomDog = function(callback) {
+  console.log('@@@@@@@@@@@@@@@@@@@@@@');
   setTimeout(function() {
     const dog = {
       name: getRandomName(),
     };
+    console.log(dog);
     callback(dog);
   }, Math.floor(Math.random() * 2000));
 };

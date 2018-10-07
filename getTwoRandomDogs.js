@@ -11,9 +11,15 @@ const getRandomDog = require('./helpers/getRandomDog');
  *      getRandomDog の中身を見てから実装しましょう。
  */
 const getTwoRandomDogs = function(callback) {
-  //
-  // TODO
-  //
+  const resultArray = [];
+  getRandomDog(function(dog){
+    resultArray.push(dog);
+  });
+  getRandomDog(function(secondDog){
+    resultArray.push(secondDog);
+    callback(resultArray);
+  });
+  
 };
 
 module.exports = getTwoRandomDogs;
