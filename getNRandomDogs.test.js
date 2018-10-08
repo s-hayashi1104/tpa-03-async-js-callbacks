@@ -17,9 +17,7 @@ describe('getNRandomDogs', () => {
   });
   test('should call the callback with N dogs as an argument', (done) => {
     getNRandomDogs(randomInt, function(dogs) {
-      for (let loop = 0; loop < randomInt; loop+=1) {
-        expect(isDog(dogs[loop])).toBe(true);
-      }
+      expect(dogs.every(dog => isDog(dog))).toBe(true);
       expect(dogs.length).toBe(randomInt);
       done();
     });
