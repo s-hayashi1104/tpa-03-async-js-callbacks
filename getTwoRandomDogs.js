@@ -10,14 +10,21 @@ const getRandomDog = require('./helpers/getRandomDog');
  * 注意：getRandomDog は非同期な処理を行います。
  *      getRandomDog の中身を見てから実装しましょう。
  */
+const callbackResultArray = function(callback, resultArray){
+  if (resultArray.length === 2) {
+    callback(resultArray);
+  }
+};
+
 const getTwoRandomDogs = function(callback) {
   const resultArray = [];
   getRandomDog(function(dog){
     resultArray.push(dog);
+    callbackResultArray(callback, resultArray);
   });
   getRandomDog(function(secondDog){
     resultArray.push(secondDog);
-    callback(resultArray);
+    callbackResultArray(callback, resultArray);
   });
   
 };
