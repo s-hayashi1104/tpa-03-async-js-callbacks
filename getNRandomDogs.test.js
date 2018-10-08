@@ -13,11 +13,11 @@ const measureLength = function(dogs) {
 describe('getNRandomDogs', () => {
   test('should take a callback as an argument and call it once', (done) => {
     const runAssertion = function() {
-      expect(callback.mock.calls.length).toBe(randomInt);
+      expect(callback.mock.calls.length).toBe(1);
       done();
     };
     let callback = jest.fn(runAssertion);
-    getNRandomDogs(callback);
+    getNRandomDogs(randomInt, callback);
   });
   test('should call the callback with N dogs as an argument', (done) => {
     getNRandomDogs(randomInt, function(dogs) {
